@@ -1,0 +1,117 @@
+---
+# This is a sample file to be used as a reference for populating a list of
+# tools that you wish to install into Galaxy from a Tool Shed via the
+# `install_tool_shed_tools.py` script.
+#
+# For each tool you want to install, you must provide the following keys:
+#  * name: this is is the name of the tool to install
+#  * owner: owner of the Tool Shed repository from where the tools is being
+#           installed
+# Further, you need to provide **one** of the following two keys:
+#  * tool_panel_section_id: ID of the tool panel section where you want the
+#                           tool to be installed. The section ID can be found
+#                           in Galaxy's `shed_tool_conf.xml` config file. Note
+#                           that the specified section must exist in this file.
+#                           Otherwise, the tool will be installed outside any
+#                           section.
+#  * tool_panel_section_label: Display label of a tool panel section where
+#                              you want the tool to be installed. If it does not
+#                              exist, this section will be created on the target
+#                              Galaxy instance (note that this is different than
+#                              when using the ID).
+#                              Multi-word labels need to be placed in quotes.
+#                              Each label will have a corresponding ID created;
+#                              the ID will be an all lowercase version of the
+#                              label, with multiple words joined with
+#                              underscores (e.g., 'BED tools' -> 'bed_tools').
+#
+# You can also specify the following optional keys to further define the
+# installation properties:
+#  * tool_shed_url: the URL of the Tool Shed from where the tool should be
+#                   installed. (default: https://toolshed.g2.bx.psu.edu)
+#  * revisions: a list of revisions of the tool, all of which will attempt to
+#               be installed. (default: latest)
+#  * install_tool_dependencies: True or False - whether to install classic galaxy 
+#                               Tool Shed dependencies or not. (default: True)
+#  * install_repository_dependencies: True or False - whether to install classic
+#                               Galaxy Tool Shed repo dependencies or not. 
+#                               (default: True)
+#  * install_resolver_dependencies: True or False - whether to install dependencies
+#                                through a resolver (e.g Conda). (default: False)
+
+api_key: <Admin user API key from galaxy_instance>
+galaxy_instance: <Galaxy instance IP>
+tools:
+- name: ctat_centrifuge_index_data_manager
+  owner: trinity_ctat
+  tool_panel_section_label: 'Trinity CTAT Assembly Tools'
+  tool_shed_url: https://testtoolshed.g2.bx.psu.edu
+  revisions:
+  - cdd963ca4bbb
+- name: ctat_genome_resource_libs_data_manager_3
+  owner: trinity_ctat
+  tool_panel_section_label: 'Trinity CTAT Assembly Tools'
+  tool_shed_url: https://testtoolshed.g2.bx.psu.edu
+  revisions:
+  - be2761745400
+- name: trinity
+  owner: trinity_ctat
+  tool_panel_section_label: 'Trinity CTAT Assembly Tools'
+  tool_shed_url: https://testtoolshed.g2.bx.psu.edu
+  revisions:
+  - 962f40c5958c
+- name: align_and_estimate_abundance
+  owner: trinity_ctat
+  tool_panel_section_label: 'Trinity CTAT RNA-Seq Protocol'
+  tool_shed_url: https://testtoolshed.g2.bx.psu.edu
+  revisions:
+  - e27d87a63bb2
+- name: concatenate_multiple_datasets
+  owner: artbio
+  tool_panel_section_label: 'Trinity CTAT RNA-Seq Protocol'
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  revisions:
+  - 6f54dc6b37da
+- name: abundance_estimation_to_matrix
+  owner: trinity_ctat
+  tool_panel_section_label: 'Trinity CTAT RNA-Seq Protocol'
+  tool_shed_url: https://testtoolshed.g2.bx.psu.edu
+  revisions:
+  - 640b67a604f7
+- name: ctat_analyze_differential_expression
+  owner: trinity_ctat
+  tool_panel_section_label: 'Trinity CTAT RNA-Seq Protocol'
+  tool_shed_url: https://testtoolshed.g2.bx.psu.edu
+  revisions:
+  - 03155bc11cff
+- name: edger_differential_expression
+  owner: trinity_ctat
+  tool_panel_section_label: 'Trinity CTAT RNA-Seq Protocol'
+  tool_shed_url: https://testtoolshed.g2.bx.psu.edu
+  revisions:
+  - d66c05101513
+- name: ctat_star_fusion
+  owner: trinity_ctat
+  tool_panel_section_label: 'Trinity CTAT Fusion Tools'
+  tool_shed_url: https://testtoolshed.g2.bx.psu.edu
+  revisions:
+  - 853bfaeea21c
+- name: discasm
+  owner: trinity_ctat
+  tool_panel_section_label: 'Trinity CTAT Fusion Tools'
+  tool_shed_url: https://testtoolshed.g2.bx.psu.edu
+  revisions:
+  - 931d2156d896
+- name: gmap_fusion
+  owner: trinity_ctat
+  tool_panel_section_label: 'Trinity CTAT Fusion Tools'
+  tool_shed_url: https://testtoolshed.g2.bx.psu.edu
+  revisions:
+  - c4f6e9bc1d5d
+- name: fusion_inspector
+  owner: trinity_ctat
+  tool_panel_section_label: 'Trinity CTAT Fusion Tools'
+  tool_shed_url: https://testtoolshed.g2.bx.psu.edu
+  revisions:
+  - 2e993ad06cf2
+ 
