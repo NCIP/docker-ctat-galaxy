@@ -44,10 +44,16 @@ galaxy_instance: <Galaxy instance IP>
 tools:
 - name: ctat_centrifuge_index_data_manager
   owner: trinity_ctat
-  tool_panel_section_label: 'Trinity CTAT Assembly Tools'
+  tool_panel_section_label: 'Trinity CTAT Metagenomics Tools'
   tool_shed_url: https://testtoolshed.g2.bx.psu.edu
   revisions:
   - cdd963ca4bbb
+- name: ctat_metagenomics
+  owner: trinity_ctat
+  tool_panel_section_label: 'Trinity CTAT Metagenomics Tools'
+  tool_shed_url: https://testtoolshed.g2.bx.psu.edu
+  revisions:
+  - 64604f709f52
 - name: ctat_genome_resource_libs_data_manager_3
   owner: trinity_ctat
   tool_panel_section_label: 'Trinity CTAT Assembly Tools'
