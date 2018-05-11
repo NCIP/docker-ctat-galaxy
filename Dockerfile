@@ -19,6 +19,10 @@ RUN cat jsonDataProvider.py >> $GALAXY_ROOT/lib/galaxy/datatypes/dataproviders/d
 RUN mv $GALAXY_ROOT/lib/galaxy/datatypes/text.py $GALAXY_ROOT/lib/galaxy/datatypes/text.bkp.py
 
 COPY text.py $GALAXY_ROOT/lib/galaxy/datatypes/text.py
+## Add a few directories, to be imported as mount points...
+## one for job working dir
+## one for the resource libs
+## and def for datafiles
 
 ADD dependency_resolvers_conf.xml $GALAXY_ROOT/dependency_resolvers_conf.xml
 
