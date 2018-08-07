@@ -38,86 +38,134 @@
 #                               (default: True)
 #  * install_resolver_dependencies: True or False - whether to install dependencies
 #                                through a resolver (e.g Conda). (default: False)
-
 api_key: <Admin user API key from galaxy_instance>
 galaxy_instance: <Galaxy instance IP>
 tools:
-- name: ctat_centrifuge_index_data_manager
+#################
+## Data managers
+#################
+- name: ctat_centrifuge_indexes_data_manager
   owner: trinity_ctat
-  tool_panel_section_label: 'Trinity CTAT Metagenomics Tools'
-  tool_shed_url: https://testtoolshed.g2.bx.psu.edu
-  revisions:
-  - cdd963ca4bbb
-- name: ctat_metagenomics
-  owner: trinity_ctat
-  tool_panel_section_label: 'Trinity CTAT Metagenomics Tools'
-  tool_shed_url: https://testtoolshed.g2.bx.psu.edu
-  revisions:
-  - 64604f709f52
-- name: ctat_genome_resource_libs_data_manager_3
-  owner: trinity_ctat
-  tool_panel_section_label: 'Trinity CTAT Assembly Tools'
-  tool_shed_url: https://testtoolshed.g2.bx.psu.edu
-  revisions:
-  - be2761745400
-- name: trinity
-  owner: trinity_ctat
-  tool_panel_section_label: 'Trinity CTAT Assembly Tools'
-  tool_shed_url: https://testtoolshed.g2.bx.psu.edu
-  revisions:
-  - 962f40c5958c
-- name: align_and_estimate_abundance
-  owner: trinity_ctat
-  tool_panel_section_label: 'Trinity CTAT RNA-Seq Protocol'
-  tool_shed_url: https://testtoolshed.g2.bx.psu.edu
-  revisions:
-  - e27d87a63bb2
-- name: concatenate_multiple_datasets
-  owner: artbio
-  tool_panel_section_label: 'Trinity CTAT RNA-Seq Protocol'
+  tool_panel_section_label: 'CTAT Metagenomics Tools'
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   revisions:
-  - 6f54dc6b37da
-- name: abundance_estimation_to_matrix
+  - b4d4f0d76e94
+- name: ctat_genome_resource_libs_data_manager
   owner: trinity_ctat
-  tool_panel_section_label: 'Trinity CTAT RNA-Seq Protocol'
-  tool_shed_url: https://testtoolshed.g2.bx.psu.edu
+  tool_panel_section_label: 'CTAT Assembly Tools'
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
   revisions:
-  - 640b67a604f7
+  - ea7bc21cbb7a
+- name: ctat_lncrna_annotations_data_manager
+  owner: trinity_ctat
+  tool_panel_section_label: 'CTAT lncRNA Tools'
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  revisions:
+  - a3aa3f9e1702
+#
+#################
+## Helpers
+#################
+- name: ctat_clean_headers
+  owner: trinity_ctat
+  tool_panel_section_label: 'CTAT Helper Tools'
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  revisions:
+  - 67e77c325002
+- name: ctat_concatenate
+  owner: trinity_ctat
+  tool_panel_section_label: 'CTAT Helper Tools'
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  revisions:
+  - 702a3586942a
+#
+#################
+## Metagenomics
+#################
+- name: ctat_metagenomics
+  owner: trinity_ctat
+  tool_panel_section_label: 'CTAT Metagenomics Tools'
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  revisions:
+  - f92fcdde48fc
+#
+########################
+## long non-coding RNA
+########################
+- name: ctat_lncrna
+  owner: trinity_ctat
+  tool_panel_section_label: 'CTAT lncRNA Tools'
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  revisions:
+  - a940c4a36a43
+#
+#################
+## Assemblers
+#################
+- name: ctat_trinity_rnaseq
+  owner: trinity_ctat
+  tool_panel_section_label: 'CTAT Assembly Tools'
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  revisions:
+  - 045dadbbb0a2
+#
+######################
+## RNA-Seq Protocol
+######################
+- name: ctat_abundance_estimation_to_matrix
+  owner: trinity_ctat
+  tool_panel_section_label: 'CTAT RNA-Seq Protocol'
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  revisions:
+  - 5eca0c75b178
 - name: ctat_analyze_differential_expression
   owner: trinity_ctat
-  tool_panel_section_label: 'Trinity CTAT RNA-Seq Protocol'
-  tool_shed_url: https://testtoolshed.g2.bx.psu.edu
+  tool_panel_section_label: 'CTAT RNA-Seq Protocol'
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
   revisions:
-  - 03155bc11cff
-- name: edger_differential_expression
+  - 2ca97cd84ce3
+- name: ctat_edger_differential_expression
   owner: trinity_ctat
-  tool_panel_section_label: 'Trinity CTAT RNA-Seq Protocol'
-  tool_shed_url: https://testtoolshed.g2.bx.psu.edu
+  tool_panel_section_label: 'CTAT RNA-Seq Protocol'
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
   revisions:
-  - d66c05101513
+  - f36264827fb4
+- name: ctat_rsem_align_and_estimate_abundance
+  owner: trinity_ctat
+  tool_panel_section_label: 'CTAT RNA-Seq Protocol'
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  revisions:
+  - 8605f8570c77
+#
+#################
+## Fusion Tools
+#################
 - name: ctat_star_fusion
   owner: trinity_ctat
-  tool_panel_section_label: 'Trinity CTAT Fusion Tools'
-  tool_shed_url: https://testtoolshed.g2.bx.psu.edu
+  tool_panel_section_label: 'CTAT Fusion Tools'
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
   revisions:
-  - 853bfaeea21c
-- name: discasm
+  - a530fa18e9e8
+- name: ctat_discasm
   owner: trinity_ctat
-  tool_panel_section_label: 'Trinity CTAT Fusion Tools'
-  tool_shed_url: https://testtoolshed.g2.bx.psu.edu
+  tool_panel_section_label: 'CTAT Fusion Tools'
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
   revisions:
-  - 931d2156d896
-- name: gmap_fusion
+  - a772e555b5a1
+- name: ctat_gmap_fusion
   owner: trinity_ctat
-  tool_panel_section_label: 'Trinity CTAT Fusion Tools'
-  tool_shed_url: https://testtoolshed.g2.bx.psu.edu
+  tool_panel_section_label: 'CTAT Fusion Tools'
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
   revisions:
-  - c4f6e9bc1d5d
-- name: fusion_inspector
+  - 966ea55e1aae
+- name: ctat_fusion_inspector
   owner: trinity_ctat
-  tool_panel_section_label: 'Trinity CTAT Fusion Tools'
-  tool_shed_url: https://testtoolshed.g2.bx.psu.edu
+  tool_panel_section_label: 'CTAT Fusion Tools'
+  tool_shed_url: https://toolshed.g2.bx.psu.edu/
   revisions:
-  - 2e993ad06cf2
- 
+  - 1a7ec343001c
+#
+###################
+## Mutation Tools
+###################
+#Coming soon

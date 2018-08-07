@@ -28,6 +28,15 @@ ADD dependency_resolvers_conf.xml $GALAXY_ROOT/dependency_resolvers_conf.xml
 
 RUN install-tools $GALAXY_ROOT/tool_list.yaml
 
+COPY setup-data.sh $GALAXY_ROOT/setup-data.sh
+COPY run_data_managers.yaml $GALAXY_ROOT/run_data_managers.yaml
+
+ADD https://raw.githubusercontent.com/morinlab/tools-morinlab/master/docker/create_and_upload_history.py $GALAXY_ROOT/create_and_upload_history.py
+
+VOLUME ["/export/", "/data/", "/var/lib/docker"]
+
+#RUN $GALAXY_ROOT/setup-data.sh
+
 # General notes for Docker dealings:
 #
 #For my sanity
