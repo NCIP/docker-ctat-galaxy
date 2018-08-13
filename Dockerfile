@@ -1,7 +1,7 @@
 FROM bgruening/galaxy-stable
 
 ENV GALAXY_CONFIG_BRAND "Trinity CTAT Galaxy"
-
+ENV GALAXY_CONFIG_WEBHOOKS_DIR $GALAXY_ROOT/config/plugins/webhooks/demo
 WORKDIR /galaxy-central
 
 RUN add-tool-shed --url 'http://testtoolshed.g2.bx.psu.edu/' --name 'Test Tool Shed'
