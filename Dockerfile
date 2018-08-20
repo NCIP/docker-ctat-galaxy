@@ -37,7 +37,7 @@ ADD https://raw.githubusercontent.com/morinlab/tools-morinlab/master/docker/crea
 VOLUME ["/export/", "/data/", "/var/lib/docker"]
 RUN apt-get update
 RUN apt-get install -y emacs 
-RUN bash $GALAXY_ROOT/setup-data.sh
+#RUN bash $GALAXY_ROOT/setup-data.sh
 
 # General notes for Docker dealings:
 #

@@ -5,21 +5,20 @@ data_managers:
     - id: ctat_genome_resource_libs_data_manager
       # tool parameters, nested parameters should be specified using a pipe (|)
       params:
-	- 'genome_resource_library|build_type':'specify_built_location'
+        - 'genome_resource_library|build_type': 'specify_built_location'
         - 'genome_resource_library|built_library_location': '/export/resources/GRCh38_v27_CTAT_lib_Feb092018/ctat_genome_lib_build_dir'
-	- 'display_name': 'GRCH38'
+        - 'display_name': 'GRCH38'
         - 'gmap_build': 'false'
       # Items refere to a list of variables you want to run this data manager. You can use them inside the param field with {{ item }}
       # In case of genome for example you can run this DM with multiple genomes, or you could give multiple URLs.
       #items:
-	#- ce6
+        #- ce6
         #- dm3
         #- mm9
       # Name of the data-tables you want to reload after your DM are finished. This can be important for subsequent data managers
       data_table_reload:
         - all_fasta
         - __dbkeys__
-
 #    - id: toolshed.g2.bx.psu.edu/repos/devteam/data_manager_bowtie2_index_builder/bowtie2_index_builder_data_manager/2.2.6
 #      params:
 #        - 'all_fasta_source': '{{ item.id }}'
