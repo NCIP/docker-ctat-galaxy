@@ -8,4 +8,6 @@ else
     cd ~/export
 fi
 pwd
+git config --global user.email "cganote@iu.edu"
+git config --global user.name "cganote"
 #nohup wget https://data.broadinstitute.org/Trinity/CTAT_RESOURCE_LIB/GRCh38_v27_CTAT_lib_Feb092018.plug-n-play.tar.gz >> nohuplog 2>&1 &
