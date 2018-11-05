@@ -1,9 +1,14 @@
 FROM bgruening/galaxy-stable
 
+#ENV GALAXY_UID "1000"
+#ENV GALAXY_GID "1000"
+
 ENV GALAXY_CONFIG_BRAND "Trinity CTAT Galaxy"
 ENV GALAXY_CONFIG_WEBHOOKS_DIR "$GALAXY_ROOT/config/plugins/webhooks/demo"
 ENV GALAXY_CONFIG_CLEANUP_JOB "never"
 WORKDIR /galaxy-central
+#COPY startup /usr/bin/startup
+#RUN chmod a+rx /usr/bin/startup
 
 RUN add-tool-shed --url 'http://testtoolshed.g2.bx.psu.edu/' --name 'Test Tool Shed'
 
@@ -37,6 +42,7 @@ ADD https://raw.githubusercontent.com/morinlab/tools-morinlab/master/docker/crea
 VOLUME ["/export/", "/data/", "/var/lib/docker"]
 RUN apt-get update
 RUN apt-get install -y emacs 
+
 #RUN bash $GALAXY_ROOT/setup-data.sh
 
 # General notes for Docker dealings:
