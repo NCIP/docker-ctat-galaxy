@@ -55,7 +55,7 @@ tools:
   tool_panel_section_label: 'CTAT Assembly Tools'
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   revisions:
-  - ea7bc21cbb7a
+  - da7f50809820
 - name: ctat_lncrna_annotations_data_manager
   owner: trinity_ctat
   tool_panel_section_label: 'CTAT lncRNA Tools'
