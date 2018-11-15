@@ -8,7 +8,7 @@ data_managers:
         - 'genome_resource_library|built_library_location': '/export/resources/GRCh38_v27_CTAT_lib_Feb092018/ctat_genome_lib_build_dir'
         - 'genome_resource_library|build_type': 'specify_built_location'
         - 'display_name': 'GRCH38'
-        - 'gmap_build': 'false'
+        - 'gmap_build': 'true'
       # Items refere to a list of variables you want to run this data manager. You can use them inside the param field with {{ item }}
       # In case of genome for example you can run this DM with multiple genomes, or you could give multiple URLs.
       #items:
